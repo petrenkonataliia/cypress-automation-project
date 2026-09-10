@@ -1,0 +1,8 @@
+services:
+  cypress:
+    image: cypress/browsers:latest
+    container_name: cypress_firefox_runner
+    working_dir: /e2e
+    volumes:
+      - .:/e2e
+    entrypoint: sh -c "npx cypress install && npx cypress run --browser firefox --config-file config/qauto.config.js"

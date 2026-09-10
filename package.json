@@ -5,7 +5,8 @@
   "main": "cypress.config.js",
   "scripts": {
     "test:qauto": "cypress run --config-file config/qauto.config.js",
-    "test:qauto2": "cypress run --config-file config/qauto2.config.js"
+    "test:qauto2": "cypress run --config-file config/qauto2.config.js",
+    "test:api": "cypress run --config-file config/qauto.config.js --spec 'cypress/e2e/apiAndUiExpenses.cy.js'"
   },
   "dependencies": {
     "ansi-escapes": "^7.3.0",
@@ -171,5 +172,8 @@
   "bugs": {
     "url": "https://github.com/petrenkonataliia/cypress-automation-project/issues"
   },
-  "homepage": "https://github.com/petrenkonataliia/cypress-automation-project#readme"
+  "homepage": "https://github.com/petrenkonataliia/cypress-automation-project#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
 }
